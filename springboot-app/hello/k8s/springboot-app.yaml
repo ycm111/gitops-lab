@@ -12,7 +12,7 @@ spec:
   # Argo CD가 모니터링할 Git 저장소 정의
   # path >>> 저장소 내 Kustomize 매니페스트(kustomization.yaml)가 위치한 경로
   source:             
-    repoURL: https://github.com/myanjini/gitops-lab.git
+    repoURL: https://github.com/ycm111/gitops-lab.git
     targetRevision: main
     path: springboot-app/hello/k8s    
 

@@ -55,8 +55,8 @@ jobs:
           file: ./springboot-app/hello/Dockerfile   # 이미지 빌드에 사용할 Dockerfile
           push: true                                # 이미지 빌드 후 도커 허브에 푸시
           tags: |                                   # 이미지 태그 (SHA: 고유 식별자, latest: 최신)
-            myanjini/hello-app:${{ steps.vars.outputs.sha }}  
-            myanjini/hello-app:latest
+            ycm111/hello-app:${{ steps.vars.outputs.sha }}  
+            ycm111/hello-app:latest
 
       # 7. Kustomize 설치 
       #    Kubernetes 매니페스트 관리를 위해 설치 
@@ -70,7 +70,7 @@ jobs:
       #    kustomize edit set image 명령을 사용해 kustomization.yaml 파일의 이미지 태그를
       #    앞에서 빌드한 새 이미지 태그(SHA 태그)로 업데이트
       - name: Update K8s manifest with new image tag
-        run: kustomize edit set image myanjini/hello-app=myanjini/hello-app:${{ steps.vars.outputs.sha }}
+        run: kustomize edit set image ycm111/hello-app=ycm111/hello-app:${{ steps.vars.outputs.sha }}
         working-directory: ./springboot-app/hello/k8s
 
       # 9. 변경된 매니페스트 커밋 및 푸시
