@@ -21,4 +21,4 @@ spec:
         image: quay.io/rhdevelopers/bgd:1.0.0
         env:
         - name: COLOR
-          value: "red"
+          value: "white"
