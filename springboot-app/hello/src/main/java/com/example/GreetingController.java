@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class GreetingController {
 
-	private static final String template = "Hello, %s ㅎㅎㅎ\n";
+	private static final String template = "Hello, %s ^oo^";
 	private final AtomicLong counter = new AtomicLong();
 
 	@GetMapping("/hello")
