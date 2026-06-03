@@ -9,4 +9,4 @@ resources:
 images:
 - name: ycm111/hello-app
   newName: ycm111/hello-app
-  newTag: fc20327
+  newTag: 89627f2
