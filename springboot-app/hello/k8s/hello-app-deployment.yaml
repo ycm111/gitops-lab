@@ -19,3 +19,4 @@ spec:
         image: ycm111/hello-app:latest
         ports:
         - containerPort: 8080
+      
